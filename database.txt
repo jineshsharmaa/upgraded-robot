@@ -1,0 +1,58 @@
+drop database Gymdb;
+create database Gymdb;
+use Gymdb;
+
+
+create table admindetails(
+username varchar(200),
+password varchar(200)
+);
+
+insert into admindetails values('admin','pass');
+
+create table memberdetails(
+memberId int NOT NULL AUTO_INCREMENT,
+Membername varchar(100),
+contact varchar(20),
+age varchar(20),
+height varchar(20),
+weight varchar(20),
+bmi varchar(20),
+gender int,
+duration int,
+address varchar(200),
+totalfees double,
+feespaid double,
+subscriptionStartDate varchar(20),
+subscriptionEndDate varchar(20),
+memberPhoto longBlob,
+PRIMARY KEY(memberId)
+);
+
+create table Enquirydetails(
+EnquiryId int NOT NULL AUTO_INCREMENT,
+Membername varchar(100),
+contact varchar(20),
+gender int,
+duration int,
+address varchar(200),
+EnquiryDate varchar(20),
+PRIMARY KEY(EnquiryId)
+);
+
+create table MemberAttendance(
+AttendanceId int NOT NULL AUTO_INCREMENT,
+memberId int,
+AttendanceDate Date,
+PRIMARY KEY(AttendanceId)
+);
+
+create table MemberPaymentLog(
+PaymentId int NOT NULL AUTO_INCREMENT,
+memberId int,
+PaymentDate Date,
+amount double,
+PRIMARY KEY(PaymentId)
+);
+
+

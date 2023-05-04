@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" language="groovy" pageWidth="595" pageHeight="300" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f6fe882-1f1a-4fdb-ba0f-50550efbe5da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="BillDate" class="java.lang.String"/>
+	<parameter name="CustomerName" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="Amount" class="java.lang.String"/>
+	<parameter name="duration" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="33" uuid="a62ef90a-2203-465c-aa40-b99222768377"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bill Receipt]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="173" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="52" width="115" height="20" uuid="9de1df59-fc46-4496-8146-9b23cd1439d2"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Customer Name :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="52" width="415" height="20" uuid="0684e49e-0140-4457-b710-ad8fd7569980"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{CustomerName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="82" width="115" height="20" uuid="01a26604-0362-46cf-8ba0-6e8766339bf5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Address :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="82" width="413" height="20" uuid="94cadbd9-d382-4eeb-877c-3aea7edfd152"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="23" width="61" height="20" uuid="9ad29945-60aa-44ef-9594-34a0fd6562d3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Bill Date :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="23" width="98" height="20" uuid="30c34ccf-76bc-4fd0-bbd3-0fd4a6a058d3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{BillDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="142" width="115" height="20" uuid="90e671a0-3183-47ce-83f5-c183e88435ae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Amount Paid :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="142" width="129" height="20" uuid="0bda314a-b83a-4fcf-bf05-2b3b673e382b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="112" width="130" height="20" uuid="542f180e-726c-481f-b65d-59acc2f4f066"/>
+				<textElement verticalAlignment="Middle">
+					<font size="13"/>
+				</textElement>
+				<text><![CDATA[Subscription Duration :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="142" y="112" width="385" height="20" uuid="6b5f512a-4743-41af-97c3-6a7fa5501712"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{duration}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
